@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.1
+%define		kdeappsver	24.02.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kcron
 Summary:	kcron
 Name:		ka6-%{kaname}
-Version:	24.02.1
+Version:	24.02.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	c80fef2a0cba545177fc4a5da52e378f
+# Source0-md5:	b99be98396b4a67edaccd14f464bb9d9
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
