@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.3
+%define		kdeappsver	24.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kcron
 Summary:	kcron
 Name:		ka6-%{kaname}
-Version:	24.08.3
+Version:	24.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	1919e33c9e6c2960c15c771f69df0a79
+# Source0-md5:	5204d4244f59fedac3c7ce1396c9d2f1
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -74,10 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_prefix}/libexec/kf6/kauth/kcron_helper
+%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_cron.so
 %{_datadir}/qlogging-categories6/kcron.categories
 %{_datadir}/metainfo/org.kde.kcron.metainfo.xml
 %{_datadir}/dbus-1/system-services/local.kcron.crontab.service
 %{_datadir}/dbus-1/system.d/local.kcron.crontab.conf
 %{_datadir}/polkit-1/actions/local.kcron.crontab.policy
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cron.so
 %{_desktopdir}/kcm_cron.desktop
